@@ -1,4 +1,6 @@
-//Not optimized prime nos problem
+//optimized prime nos problem as the factor of prime number must be less ythan the square root of the given nos so hence we use this strategy only
+//Reminder it is not optimized as it will divide with all the possible factor (but the question is do we really need to divide with each and every factor because if an number divide by 
+//a single factor nos then this clearly show that number is not prime.So solution to this is discussed in next discussion
 import java.util.*;
 public class IsPrimeNos {
     public static void main(String[] args) {
@@ -8,14 +10,14 @@ public class IsPrimeNos {
         {
         int n=scn.nextInt();
         int count =0;
-        for(int div=1;div<=n;div++)
+        for(int div=2;(div*div)<=n;div++)
         {
             if(n%div==0)
             {
             count++;
             }
         }
-        if(count==2)
+        if(count==0)
         {
          System.out.println("prime");
          }
@@ -26,5 +28,4 @@ public class IsPrimeNos {
        scn.close();
     }
 }
-
 
