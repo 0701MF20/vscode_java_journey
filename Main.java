@@ -20,7 +20,16 @@ if(((n+1)/2)<i)
 }
 for(int j=1;j<=star;j++)
 {
- System.out.print(result+"\t");
+ System.out.print(result +"\t");
+ if((space+j)<=(n/2))
+ {
+     result++;
+ }
+ else
+ {
+     result=(j+space)-(n/2);
+     result=(n/2)+1-result;
+ }
 }
 
 if(i<=n/2)
